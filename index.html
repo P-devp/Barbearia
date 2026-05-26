@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Barbearia Premium - Cortes clássicos e modernos com estilo. Arte e tradição em cada detalhe.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Barbearia Corte & Estilo - Premium Barber Shop">
+    <meta property="og:description" content="Cortes que contam histórias. Tradição e excelência em cada detalhe.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1a0f08/6ba84d?text=Corte+%26+Estilo">
+    <meta property="og:url" content="https://seusite.com">
+    <meta property="og:type" content="website">
+    
+    <title>Barbearia Corte & Estilo | Premium Barber Shop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="header">
+    <div class="container header-inner">
+        <a href="#" class="logo" aria-label="Barbearia Corte & Estilo - Página inicial">
+            <i class="fas fa-cut"></i>
+            <span>Corte & Estilo</span>
+        </a>
+        <nav class="main-nav" aria-label="Navegação principal">
+            <ul>
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#destaques" class="nav-link">Destaques</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#precos" class="nav-link">Preços</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <span class="small-caps">Tradição & Excelência</span>
+            <h1 class="hero-title">A arte da barbearia</h1>
+            <p class="hero-sub">Navalha, tesoura e precisão. Cortes que contam histórias.</p>
+            <p class="hero-meta">— Cada detalhe pensado para seu estilo —</p>
+            <hr class="section-divider">
+            <a href="#contato" class="cta-button">Agende seu horário</a>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Slider de Destaques -->
+    <section id="destaques" class="slider-section">
+        <div class="container">
+            <h2 class="section-title">Destaques da Semana</h2>
+            <p class="section-subtitle small-caps">Os cortes mais pedidos</p>
+            <hr class="section-divider">
+
+            <div class="swiper swiper-destaques" aria-roledescription="carousel" aria-label="Destaques da semana">
+                <div class="swiper-wrapper" id="swiperWrapper">
+                    <!-- Slides inseridos via JS -->
+                </div>
+                <div class="swiper-pagination" id="swiperPagination"></div>
+                <button class="swiper-button-prev" aria-label="Slide anterior"></button>
+                <button class="swiper-button-next" aria-label="Próximo slide"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Portfólio de Cortes</h2>
+            <p class="section-subtitle small-caps">Técnica e elegância</p>
+            <hr class="section-divider">
+            <div class="gallery-grid" id="galleryGrid"></div>
+            <p class="gallery-footer-note small-caps">+ 20 estilos exclusivos</p>
+        </div>
+    </section>
+
+    <!-- Tabela de Preços -->
+    <section id="precos" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Tabela de Preços</h2>
+            <p class="section-subtitle small-caps">Investimento em estilo</p>
+            <hr class="section-divider">
+
+            <div class="pricing-table">
+                <div class="pricing-row">
+                    <div class="service-icon">💈</div>
+                    <div class="service-name">Corte</div>
+                    <div class="service-desc">Tesoura, máquina e navalha</div>
+                    <div class="service-price">R$ 30</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="service-icon">🧔</div>
+                    <div class="service-name">Barba</div>
+                    <div class="service-desc">Modelagem e hidratação</div>
+                    <div class="service-price">R$ 15</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="service-icon">🤨</div>
+                    <div class="service-name">Sobrancelha</div>
+                    <div class="service-desc">Design com navalha</div>
+                    <div class="service-price">R$ 10</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="service-icon">💇‍♂️</div>
+                    <div class="service-name">Bigode</div>
+                    <div class="service-desc">Aparação e alinhamento</div>
+                    <div class="service-price">R$ 10</div>
+                </div>
+                <div class="pricing-row">
+                    <div class="service-icon">💆</div>
+                    <div class="service-name">Limpeza de Pele</div>
+                    <div class="service-desc">Esfoliação e hidratação facial</div>
+                    <div class="service-price">R$ 15</div>
+                </div>
+            </div>
+            <p class="pricing-note small-caps">* Consulte combos promocionais</p>
+        </div>
+    </section>
+</main>
+
+<footer id="contato" class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Rua Onze, 422 - Jardim Progresso, Guarujá</p>
+                <p><i class="fas fa-phone-alt"></i> (11) 98765-4321</p>
+                <p class="contact-email"><i class="far fa-envelope"></i> contato@corteestilo.com</p>
+                <p><i class="far fa-clock"></i> Seg - Dom: 09h às 19h</p>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+        <!-- Mapa Google Maps -->
+        <div class="footer-map">
+            <iframe
+                src="https://www.google.com/maps?q=Rua+Onze,+422+-+Jardim+Progresso,+Guaruj%C3%A1&output=embed"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localização da Barbearia Corte & Estilo">
+            </iframe>
+        </div>
+        <div class="footer-copy">© 2026 Corte & Estilo • Arte e tradição em cada corte</div>
+    </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de imagem">
+    <button class="lightbox-close" aria-label="Fechar visualizador">&times;</button>
+    <button class="lightbox-prev" aria-label="Imagem anterior">&lsaquo;</button>
+    <button class="lightbox-next" aria-label="Próxima imagem">&rsaquo;</button>
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightboxImg">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+</div>
+
+<div id="toast" class="toast" aria-live="polite" aria-hidden="true"></div>
+
+<!-- Botão Voltar ao Topo -->
+<button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Player de Música -->
+<div id="music-player" class="music-player" aria-label="Player de música ambiente">
+    <audio id="bg-music" preload="auto" loop crossorigin="anonymous">
+        <source src="audio/ambiente.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+    <button id="music-toggle" class="music-toggle" type="button" aria-label="Tocar música ambiente" title="Música ambiente">
+        <i class="fas fa-music"></i>
+    </button>
+    <span class="music-label">Música</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="javascript/main.js" defer></script>
+</body>
+</html>
