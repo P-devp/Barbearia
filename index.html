@@ -4,23 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Barbearia Premium - Cortes clássicos e modernos com estilo. Arte e tradição em cada detalhe.">
-    
-    <!-- Open Graph -->
+
     <meta property="og:title" content="Barbearia Corte & Estilo - Premium Barber Shop">
     <meta property="og:description" content="Cortes que contam histórias. Tradição e excelência em cada detalhe.">
     <meta property="og:image" content="https://via.placeholder.com/1200x630/1a0f08/6ba84d?text=Corte+%26+Estilo">
     <meta property="og:url" content="https://seusite.com">
     <meta property="og:type" content="website">
-    
+
     <title>Barbearia Corte & Estilo | Premium Barber Shop</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Barbearia Corte & Estilo",
+        "description": "Barbearia premium com cortes clássicos e modernos",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Onze, 422 - Jardim Progresso",
+            "addressLocality": "Guarujá",
+            "addressRegion": "SP"
+        },
+        "telephone": "(11) 98765-4321",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "09:00",
+            "closes": "19:00"
+        },
+        "priceRange": "R$10-R$30"
+    }
+    </script>
 </head>
 <body>
 
@@ -35,15 +65,19 @@
                 <li><a href="#inicio" class="nav-link">Início</a></li>
                 <li><a href="#destaques" class="nav-link">Destaques</a></li>
                 <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#comparacao" class="nav-link">Antes e Depois</a></li>
+                <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
                 <li><a href="#precos" class="nav-link">Preços</a></li>
                 <li><a href="#contato" class="nav-link">Contato</a></li>
             </ul>
         </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro" title="Tema">
+            <i class="fas fa-moon"></i>
+        </button>
     </div>
 </header>
 
 <main>
-    <!-- Hero -->
     <section id="inicio" class="hero">
         <div class="container">
             <span class="small-caps">Tradição & Excelência</span>
@@ -58,7 +92,6 @@
         </div>
     </section>
 
-    <!-- Slider de Destaques -->
     <section id="destaques" class="slider-section">
         <div class="container">
             <h2 class="section-title">Destaques da Semana</h2>
@@ -66,9 +99,7 @@
             <hr class="section-divider">
 
             <div class="swiper swiper-destaques" aria-roledescription="carousel" aria-label="Destaques da semana">
-                <div class="swiper-wrapper" id="swiperWrapper">
-                    <!-- Slides inseridos via JS -->
-                </div>
+                <div class="swiper-wrapper" id="swiperWrapper"></div>
                 <div class="swiper-pagination" id="swiperPagination"></div>
                 <button class="swiper-button-prev" aria-label="Slide anterior"></button>
                 <button class="swiper-button-next" aria-label="Próximo slide"></button>
@@ -76,18 +107,64 @@
         </div>
     </section>
 
-    <!-- Galeria de Fotos -->
     <section id="galeria" class="gallery-section">
         <div class="container">
             <h2 class="section-title">Portfólio de Cortes</h2>
             <p class="section-subtitle small-caps">Técnica e elegância</p>
             <hr class="section-divider">
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="todos" aria-pressed="true">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="cortes" aria-pressed="false">
+                    <i class="fas fa-cut"></i> Cortes
+                </button>
+                <button class="filter-btn" data-filter="barbas" aria-pressed="false">
+                    <i class="fas fa-beard"></i> Barbas
+                </button>
+            </div>
+
             <div class="gallery-grid" id="galleryGrid"></div>
             <p class="gallery-footer-note small-caps">+ 20 estilos exclusivos</p>
         </div>
     </section>
 
-    <!-- Tabela de Preços -->
+    <section id="comparacao" class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Antes & Depois</h2>
+            <p class="section-subtitle small-caps">A transformação fala por si</p>
+            <hr class="section-divider">
+
+            <div class="comparison-slider">
+                <div class="img-wrapper">
+                    <img src="antes.jpg" alt="Antes do corte">
+                    <label class="comparison-label before">Antes</label>
+                </div>
+                <div class="img-wrapper after-image">
+                    <img src="depois.jpg" alt="Depois do corte">
+                    <label class="comparison-label after">Depois</label>
+                </div>
+                <input type="range" min="0" max="100" value="50" id="comparison-range" class="comparison-range" aria-label="Arraste para comparar">
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            <p class="section-subtitle small-caps">Feedbacks reais</p>
+            <hr class="section-divider">
+
+            <div class="swiper swiper-testimonials" aria-roledescription="carousel" aria-label="Depoimentos de clientes">
+                <div class="swiper-wrapper" id="testimonialSwiper"></div>
+                <div class="swiper-pagination" id="testimonialPagination"></div>
+                <button class="swiper-button-prev" aria-label="Depoimento anterior"></button>
+                <button class="swiper-button-next" aria-label="Próximo depoimento"></button>
+            </div>
+        </div>
+    </section>
+
     <section id="precos" class="pricing-section">
         <div class="container">
             <h2 class="section-title">Tabela de Preços</h2>
@@ -102,19 +179,19 @@
                     <div class="service-price">R$ 30</div>
                 </div>
                 <div class="pricing-row">
-                    <div class="service-icon">🧔</div>
+                    <div class="service-icon">🪒</div>
                     <div class="service-name">Barba</div>
                     <div class="service-desc">Modelagem e hidratação</div>
                     <div class="service-price">R$ 15</div>
                 </div>
                 <div class="pricing-row">
-                    <div class="service-icon">🤨</div>
+                    <div class="service-icon">✨</div>
                     <div class="service-name">Sobrancelha</div>
                     <div class="service-desc">Design com navalha</div>
                     <div class="service-price">R$ 10</div>
                 </div>
                 <div class="pricing-row">
-                    <div class="service-icon">💇‍♂️</div>
+                    <div class="service-icon">🧔</div>
                     <div class="service-name">Bigode</div>
                     <div class="service-desc">Aparação e alinhamento</div>
                     <div class="service-price">R$ 10</div>
@@ -147,16 +224,11 @@
                 <a href="#" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i></a>
             </div>
         </div>
-        <!-- Mapa Google Maps -->
         <div class="footer-map">
             <iframe
                 src="https://www.google.com/maps?q=Rua+Onze,+422+-+Jardim+Progresso,+Guaruj%C3%A1&output=embed"
-                width="100%"
-                height="300"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                width="100%" height="300" style="border:0;" allowfullscreen=""
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 title="Localização da Barbearia Corte & Estilo">
             </iframe>
         </div>
@@ -164,7 +236,6 @@
     </div>
 </footer>
 
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de imagem">
     <button class="lightbox-close" aria-label="Fechar visualizador">&times;</button>
     <button class="lightbox-prev" aria-label="Imagem anterior">&lsaquo;</button>
@@ -177,15 +248,13 @@
 
 <div id="toast" class="toast" aria-live="polite" aria-hidden="true"></div>
 
-<!-- Botão Voltar ao Topo -->
 <button id="backToTop" class="back-to-top" aria-label="Voltar ao topo">
     <i class="fas fa-arrow-up"></i>
 </button>
 
-<!-- Player de Música -->
 <div id="music-player" class="music-player" aria-label="Player de música ambiente">
-    <audio id="bg-music" preload="auto" loop crossorigin="anonymous">
-        <source src="audio/ambiente.mp3" type="audio/mpeg">
+    <audio id="bg-music" preload="metadata" loop>
+        <source src="bg-music.mp3" type="audio/mpeg">
         Seu navegador não suporta áudio.
     </audio>
     <button id="music-toggle" class="music-toggle" type="button" aria-label="Tocar música ambiente" title="Música ambiente">
@@ -195,6 +264,12 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="javascript/main.js" defer></script>
+<script src="main.js" defer></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js').catch(err => console.log('SW registration failed:', err));
+    }
+</script>
 </body>
 </html>
